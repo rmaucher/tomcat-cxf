@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src/it/servletinjection/src/main/java"/>
+	<classpathentry kind="src" path="src/it/servletinjection/src/test/java"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/apache-tomcat-trunk"/>
+	<classpathentry kind="lib" path="/home/remm/.m2/repository/org/apache/geronimo/specs/geronimo-jcdi_2.0_spec/1.0.1/geronimo-jcdi_2.0_spec-1.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/remm/.m2/repository/org/apache/geronimo/specs/geronimo-atinject_1.0_spec/1.0/geronimo-atinject_1.0_spec-1.0.jar"/>
+	<classpathentry kind="lib" path="/home/remm/.m2/repository/junit/junit/4.12/junit-4.12.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/cxf"/>
+	<classpathentry kind="lib" path="/home/remm/.m2/repository/org/apache/johnzon/johnzon-jsonb/1.1.12/johnzon-jsonb-1.1.12.jar"/>
+	<classpathentry kind="lib" path="/home/remm/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.1/javax.ws.rs-api-2.1.jar"/>
+	<classpathentry kind="lib" path="/home/remm/.m2/repository/javax/json/bind/javax.json.bind-api/1.0/javax.json.bind-api-1.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
