@@ -22,7 +22,7 @@ import javax.ws.rs.ext.Provider;
 
 import org.apache.johnzon.jaxrs.jsonb.jaxrs.JsonbJaxrsProvider;
 
-@Produces("application/json") // jaxrs import
-@Provider //jaxrs import
-@Dependent // cdi import
+@Produces("application/json")
+@Provider
+@Dependent
 public class JsonBean<T> extends JsonbJaxrsProvider<T> {}

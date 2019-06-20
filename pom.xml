@@ -76,6 +76,7 @@
             <artifactId>cxf-rt-rs-json-basic</artifactId>
             <version>${cxf.version}</version>
         </dependency>
+        <!-- Apache Johnzon -->
         <dependency>
             <groupId>org.apache.johnzon</groupId>
             <artifactId>johnzon-jsonb</artifactId>
@@ -106,7 +107,7 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <createDependencyReducedPom>true</createDependencyReducedPom>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>META-INF/cxf/bus-extensions.txt</resource>
@@ -117,12 +118,13 @@
                             </transformers>
 				            <artifactSet>
                                 <excludes>
+                                    <!-- Already present in Tomcat or in the CDI bundle -->
                                     <exclude>javax.annotation:javax.annotation-api</exclude>
 									<exclude>javax.el:*</exclude>
 									<exclude>javax.enterprise:cdi-api</exclude>
 									<exclude>javax.inject:*</exclude>
 									<exclude>javax.interceptor:*</exclude>
-									<!-- Exclude other dependencies -->
+									<!-- Exclude other unneeded dependencies -->
 									<exclude>org.apache.ant:*</exclude>
 									<exclude>org.codehaus.woodstox:*</exclude>
 									<exclude>org.glassfish.jaxb:*</exclude>
@@ -143,7 +145,7 @@
 										<exclude>META-INF/LICENSE</exclude>
 										<exclude>META-INF/NOTICE.txt</exclude>
 										<exclude>META-INF/NOTICE</exclude>
-										<!-- Misc config files -->
+										<!-- Unneeded configuration files -->
 										<exclude>META-INF/cxf/cxf.*</exclude>
 										<exclude>META-INF/cxf/cxf-servlet.*</exclude>
 										<exclude>META-INF/cxf/org.apache.cxf.bus.factory</exclude>
